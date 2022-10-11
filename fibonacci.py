@@ -28,9 +28,8 @@ and computes the corresponding values for q and prints the last 5 values. You do
 The convergence rates should get close to 1 and N gets large.
 
 """
-
 import numpy as np
-import matplotlib.pyplot
+
 
 def make_Fibonacci(n):
     """
