@@ -82,12 +82,27 @@ def converging_ratios(F):
         
         
 def compute_rates(e):
+    """
+    Computes the convergence rates for a list of errors(e)
+
+    Parameters
+    ----------
+    e : list
+        A list of convergence errors.
+
+    Returns
+    -------
+    q : list
+        A list of convergence rates.
+
+    """
     q = []
     for i in range(len(e) - 1):
         q.append(np.log(e[i + 1] / e[i]) / np.log(e[i] / e[i - 1]))
     
     return q
     
+
 if __name__ == "__main__":
     i = make_Fibonacci(20)
     print(f"Generating the first 20 Fibonacci numbers: {i}")
